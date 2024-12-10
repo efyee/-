@@ -1,0 +1,32 @@
+// 当一个同名混合第一个参数是"@_"时，调用其他混合会自动调用该带有"@_"参数的混合
+// 注意，除了匹配模型其他的形参也要带上，只要个数一样就行了
+// 这里有bug不知道为什么，可能是easyless插件不认识
+.triangle(@_, @wwww, @cccc) {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.triangle(T, @w, @c) {
+    border-width: @w;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent @c transparent;
+}
+
+.triangle(R, @w, @c) {
+    border-width: @w;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent @c;
+}
+
+.triangle(B, @w, @c) {
+    border-width: @w;
+    border-style: solid dashed dashed dashed;
+    border-color: @c transparent transparent transparent;
+}
+
+.triangle(L, @w, @c) {
+    border-width: @w;
+    border-style: dashed solid dashed dashed;
+    border-color: transparent @c transparent transparent;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style></style>
+    <script></script>
+    <!-- 
+    混合
+	    混合就是将一系列属性从一个规则集引入到另一个规则集的方式(详情见less文件)
+	    1.普通混合 
+            .center{}
+            缺点：会编译到原生css文件中导致内容过多     
+
+	    2.不带输出的混合
+            .center(){}
+
+	    3.带参数的混合
+            .center(@w){
+                weight:@w; 
+            }
+
+	    4.带参数并且有默认值的混合
+            .center(@w:10px,@h:10px){
+                weight:@w; 
+                height:@h;
+            }
+            参数要么全部都有默认值，要么从第一个开始按顺序往后省略默认值
+                即从后往前设置默认值且不能断
+
+	    5.带多个参数的混合
+            .center(@w,@h){
+                weight:@w; 
+                height:@h;
+            }
+            参数的个数和位置要对上
+
+	    6.命名参数
+            当形参与实参个数不匹配时，可以在调用时指定这个实参是给谁的
+                .center(@h:10px);    
+
+	    7.匹配模式
+            #wrap2 .sjx {
+                .triangle(T, 100px, blue);
+            }
+            混合模式前面带有"T、R、B、R"等任意标识符的就是匹配模型
+                在调用时通过传递对应的匹配字符就能调用对应的混合模式
+
+	    8.arguments变量 
+            就相当于是实参列表
+    -->
+
+    <link rel="stylesheet" href="../css/3-4/1.css">
+    <!-- <link rel="stylesheet" href="../css/3-4/2.css"> -->
+    <link rel="stylesheet" href="../css/3-4/3.css">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="inner"></div>
+        <div class="inner2"></div>
+    </div>
+
+    <div id="wrap2">
+        <div class="sjx"></div>
+    </div>
+    <br>
+    <div class="bTest"></div>
+</body>
+
+</html>

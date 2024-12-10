@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding: 0;
+}
+@import './center/center-mixin.less';
+.wrap {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 0 auto;
+    .inner {
+        &:nth-child(1){
+            .center(100px,100px,pink);
+        }
+        &:nth-child(2){
+            .center(50px,50px,deeppink);
+        }
+    }
+}

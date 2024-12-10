@@ -1,0 +1,11 @@
+#wrap2 .sjx {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: 100px;
+  border-style: dashed solid dashed dashed;
+  border-color: transparent blue transparent transparent;
+}
+.bTest {
+  border: 1px solid black;
+}

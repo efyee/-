@@ -1,0 +1,12 @@
+.target {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: pink;
+}
+.test {
+  width: 50px + 50px;
+  height: 100px + 100px;
+  border: 1px solid black;
+  background-color: deeppink;
+}

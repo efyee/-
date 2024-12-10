@@ -1,0 +1,89 @@
+@color: yellowgreen;
+
+// 1.普通混合
+.center1 {
+    background-color: blue;
+}
+
+// 2.不带输出的混合
+.center2() {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: @color;
+    height: 100px;
+    width: 100px;
+}
+
+// 3.带参数的混合
+.center3(@w, @h, @bacc) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: @bacc;
+    width: @w;
+    height: @h;
+}
+
+// 4.带参数并且有默认值的混合
+.center4(@w, @h: 10px, @bacc: red) {
+    // 这里第一个参数没有设置默认值需要手动输入
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: @bacc;
+    width: @w;
+    height: @h;
+}
+
+.center5(@w: 10px, @h, @bacc: red) {
+    // 这里第二个参数没有设置默认值，用于测试命名参数的准确性
+    // 只是测试，一般不推荐这么写
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: @bacc;
+    width: @w;
+    height: @h;
+}
+
+#wrap {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid;
+    margin: 0 auto;
+
+    .inner {
+        // .center1;
+        // .center2();
+        // .center3(200px,200px,blue);
+        // .center4(200px,100px,blue);
+
+        // 命名参数
+        .center4(@h: 100px, @bacc: blue, @w: 200px)
+    }
+
+    .inner2 {
+        // .center3(100px,100px,red);
+        // .center4(20px);
+
+        //命名参数
+        // 可以指定给中间或其他特殊位置的形参，但不推荐这么写
+        .center5(@h: 100px);
+    }
+
+
+}

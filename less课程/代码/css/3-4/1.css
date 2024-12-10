@@ -1,0 +1,32 @@
+.center1 {
+  background-color: blue;
+}
+#wrap {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border: 1px solid;
+  margin: 0 auto;
+}
+#wrap .inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: blue;
+  width: 200px;
+  height: 100px;
+}
+#wrap .inner2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: red;
+  width: 10px;
+  height: 100px;
+}

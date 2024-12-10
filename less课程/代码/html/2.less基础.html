@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 
+        注释
+   	        以//开头的注释，不会被编译到css文件中
+   	        以/**/包裹的注释会被编译到css文件中  
+	
+        变量
+	        使用@来申明一个变量：@pink：pink;
+	        1.作为普通属性值只来使用：直接使用@pink
+	        2.作为选择器和属性名：#@{selector的值}的形式
+	        3.作为URL：@{url}
+	        4.变量的延迟加载
+                详情见 "变量的延迟加载.less" 文件
+
+        嵌套规则
+	        1.基本嵌套规则 
+	        2.&的使用
+                代表平级
+    -->
+
+    <!-- 注释 -->
+    <link rel="stylesheet" href="../css/2/2.css">
+    <!-- 变量 -->
+    <link rel="stylesheet" href="../css/2/3.css">
+    <!-- 嵌套规则 -->
+    <link rel="stylesheet" href="../css/2/5.css">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="inner"></div>
+    </div>
+</body>
+<script src="../js/less.min.js"></script>
+
+</html>

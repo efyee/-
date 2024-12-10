@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 对于需要使用less编译的style标签可以通过加 type/less 来处理 
+            但是这样不算是预处理，这算是加载是处理-->
+    <!-- <style type="text/less"></style> -->
+
+    <!-- 通过引入一个less文件来实现预处理，将这个less文件转换成css文件就是线下预处理
+            与线上浏览器读代码没有关系 -->
+
+            <!-- 注意 这安装了Easy LESS这个插件 在编写玩less文件后
+                按 ctrl + s 自动生成一个css文件 -->
+    <link rel="stylesheet" href="../css/1/1.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="inner"></div>
+    </div>
+</body>
+
+<!-- 这个js文件是通过自己的方式去重新编写一次style，所以要放在style下面 -->
+<script src="../js/less.min.js"></script>
+
+</html>
